@@ -1,12 +1,15 @@
 import pandas as pd
 import mysql.connector
+import parameters
 
-host = "commit2db.coq2sq92whjo.us-east-1.rds.amazonaws.com"
-db = "aspen_monitor"
-user = "aspen_monitor"
-passw = "c7sYFpm$Js"
 
-source_path = str('C:\\Users\\kpjf039\\Documents\\Projects\\Load_Lean_File\\files\\Global Lean Problem Solving Portfolio.csv')
+
+host = parameters.param.host
+db = parameters.param.db
+user = parameters.param.user
+passw = parameters.param.user
+
+source_path = parameters.param.source_path
 
 data = pd.read_csv(source_path)
 
